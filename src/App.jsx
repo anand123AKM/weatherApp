@@ -10,6 +10,8 @@ import "./App.css";
   import heavyr from "./images/heavyr.jpeg"
   import snow from "./images/snow.webp"
   import rainc from "./images/rainy-cloudy.webp"
+  import night from "./images/night.jpg"
+  import rainnight from "./images/rainnight.jpg" 
 
 const App = () => { const [searchv, setsearchv] = useState("lucknow"); 
 const apiKey = "fd9b980c7bb1e4097ad73994867af5d1";
@@ -31,16 +33,28 @@ const getweather = async () => { try { const res = await axios.get( `  https://a
  setTemp((res.data.main.temp - 273.15).toFixed(2)); 
  setCondition(res.data.weather[0].description);
   setLocation(`${res.data.name} ${res.data.sys.country}`);
-const date = new Date(res.data.dt * 1000);
-setlocaltime(date.toLocaleTimeString());
+  const date = new Date((res.data.dt + res.data.timezone) * 1000); 
+  setlocaltime(date.getUTCHours() + ":" + date.getUTCMinutes() + ":" + date.getUTCSeconds()); 
     sethumidity(res.data.main.humidity);
      setwind(res.data.wind.speed);
 
+
+    let hours = date.getUTCHours();
+
      let tempCelsius = res.data.main.temp - 273.15;
      let condition1 = res.data.weather[0].description;
-  if (condition1 === "rain" || condition1 === "heavy rain" ){
+
+
+     if((hours >= 6 || hours < 18) && (condition1 === "rain" || condition1 === "heavy rain" || condition1==="cloudy" )){
+    seticon(rainnight); 
+    }
+     else if (hours >= 18 || hours < 6){
+  seticon(night);
+}
+ else if (condition1 === "rain" || condition1 === "heavy rain" ){
   seticon(heavyr);
 }
+
 else if (condition1 === "cloudy"){
   seticon(rainc)
 }
