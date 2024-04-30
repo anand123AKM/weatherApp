@@ -12,6 +12,7 @@ import "./App.css";
   import rainc from "./images/rainy-cloudy.webp"
   import night from "./images/night.jpg"
   import rainnight from "./images/rainnight.jpg" 
+  import snowy from "./images/snowy.jpg"
 
 const App = () => { const [searchv, setsearchv] = useState("lucknow"); 
 const apiKey = "fd9b980c7bb1e4097ad73994867af5d1";
@@ -44,8 +45,10 @@ const getweather = async () => { try { const res = await axios.get( `  https://a
      let tempCelsius = res.data.main.temp - 273.15;
      let condition1 = res.data.weather[0].description;
 
-
-     if((hours >= 6 || hours < 18) && (condition1 === "rain" || condition1 === "heavy rain" || condition1==="cloudy" )){
+if ((hours >= 6 || hours < 18) && ( tempCelsius<5 ) ){
+  seticon(snowy);
+}
+   else  if((hours >= 6 || hours < 18) && (condition1 === "rain" || condition1 === "heavy rain" || condition1==="cloudy" )){
     seticon(rainnight); 
     }
      else if (hours >= 18 || hours < 6){
@@ -58,7 +61,7 @@ const getweather = async () => { try { const res = await axios.get( `  https://a
 else if (condition1 === "cloudy"){
   seticon(rainc)
 }
-else if ( tempCelsius < 7 ){
+else if ( tempCelsius < 5 ){
 seticon(snow)
 }
 else if ( tempCelsius < 15 && tempCelsius > 7 ){
