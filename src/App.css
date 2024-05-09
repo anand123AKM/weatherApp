@@ -10,16 +10,14 @@
   width: 40%;
   margin-top: 13%;
   margin-left: 25%;
-    background: linear-gradient(to right,
-          teal,
-          white);
+      background: linear-gradient(to right,
+            teal,
+            white);
 }
 
 .input {
   margin: 10px;
-    background: linear-gradient(to right,
-          teal,
-          white);
+  background-color: rgb(98, 212, 247);
 }
 
 .input input {
@@ -47,9 +45,7 @@
   height: 80px;
   margin: 5px;
   border: transparent;
-    background: linear-gradient(to right,
-          teal,
-          white);
+  background-color: rgb(98, 212, 247);
 }
 
 .icon img {
@@ -71,9 +67,7 @@
   text-align: center;
   margin: 5px;
   margin-top: 15px;
-    background: linear-gradient(to right,
-          teal,
-          white);
+  background-color: rgb(98, 212, 247);
 }
 
 .temp span {
@@ -82,9 +76,7 @@
   margin: 5px;
   font-family: sans-serif;
   color: rgb(0, 0, 0);
-    background: linear-gradient(to right,
-          teal,
-          white);
+  background-color: rgb(98, 212, 247);
 }
 
 .con {
@@ -96,15 +88,11 @@
   color: rgb(0, 0, 0);
   font-size: 18px;
 
-    background: linear-gradient(to right,
-          teal,
-          white);
+  background-color: rgb(98, 212, 247);
 }
 
 .loc {
-    background: linear-gradient(to right,
-          teal,
-          white);
+  background-color: rgb(98, 212, 247);
   font-weight: bold;
   margin: 3px;
   font-size: large;
@@ -114,16 +102,12 @@
 }
 
 .locdiv {
-      background: linear-gradient(to right,
-            teal,
-            white);
+  background-color: rgb(98, 212, 247);
   text-align: center;
 }
 
 .time {
-    background: linear-gradient(to right,
-          teal,
-          white);
+  background-color: rgb(98, 212, 247);
   font-weight: bold;
   margin: 1px;
   margin-bottom: 7px;
@@ -136,15 +120,11 @@
 .hpw {
   width: 100%;
   text-align: center;
-    background: linear-gradient(to right,
-          teal,
-          white);
+  background-color: rgb(98, 212, 247);
 }
 
 .hpw span {
-    background: linear-gradient(to right,
-          teal,
-          white);
+  background-color: rgb(98, 212, 247);
   margin: 14px;
   font-size: 18px;
   margin-right: 30px;
@@ -154,18 +134,14 @@
 }
 
 .hum {
-    background: linear-gradient(to right,
-          teal,
-          white);
+  background-color: rgb(98, 212, 247);
   font-size: 18px;
   margin-top: 3px;
   margin-right: 5px;
 }
 
 .wind {
-    background: linear-gradient(to right,
-          teal,
-          white);
+  background-color: rgb(98, 212, 247);
   font-size: 18px;
   margin-top: 3px;
   margin-right: 5px;
